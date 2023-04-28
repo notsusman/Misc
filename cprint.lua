@@ -8,7 +8,7 @@ local function run()
 
     local success, result = pcall(function() return dev_console.MainView.ClientLog; end)
 
-    local container = (success and result) or nil;
+    local container = (success and result) or nil; -- fuck you infinite yield
     
     local scheduled = {}
     local cached = {}
